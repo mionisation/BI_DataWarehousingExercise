@@ -9,6 +9,6 @@ CREATE TABLE TB_ProductCategory (
 	
 	CONSTRAINT PK_ProductCategory PRIMARY KEY (ProductCategoryID),
 
-	CONSTRAINT FK_ProductCategory FOREIGN KEY (ParentProductCategoryID)
+	CONSTRAINT FK_ParentProductCategory FOREIGN KEY (ParentProductCategoryID)
 	REFERENCES TB_ProductCategory(ProductCategoryID)
 )

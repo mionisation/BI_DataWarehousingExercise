@@ -24,7 +24,7 @@ CREATE TABLE TB_SalesOrderHeader (
 	CONSTRAINT FK_ShipToAddress FOREIGN KEY (ShipToAddressID)
 	REFERENCES TB_Address(AddressID),
 
-	CONSTRAINT FK_Customer FOREIGN KEY (CustomerID)
+	CONSTRAINT FK_Customer_SalesOrderHeader FOREIGN KEY (CustomerID)
 	REFERENCES TB_Customer(CustomerID),
 
 	CONSTRAINT FK_ShipMethod FOREIGN KEY (ShipMethodID)
