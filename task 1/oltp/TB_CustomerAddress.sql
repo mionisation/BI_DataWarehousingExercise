@@ -5,6 +5,8 @@ USE BI_OLTP_11;
 CREATE TABLE TB_CustomerAddress (
 	CustomerID int not null,
 	AddressID int not null,
+	AddressType varchar(255) not null,
+
 	CONSTRAINT PK_CustomerAddress PRIMARY KEY (CustomerID,AddressID),
 	
 	CONSTRAINT FK_Customer_CustomerAddress FOREIGN KEY (CustomerID)
