@@ -22,6 +22,14 @@ CREATE TABLE DM_Product (
 	DiscontinuedDate timestamp,
 	IsBulkyItem integer,
 
-	CONSTRAINT PK_DM_Product PRIMARY KEY (ProductID)
+	CONSTRAINT PK_DM_Product PRIMARY KEY (ProductID),
 
+	CONSTRAINT FK_SellStartDate FOREIGN KEY (SellStartDate)
+	REFERENCES DM_Time(`Date`),
+
+	CONSTRAINT FK_SellEndDate FOREIGN KEY (SellEndDate)
+	REFERENCES DM_Time(`Date`),
+
+	CONSTRAINT FK_DiscontinuedDate FOREIGN KEY (DiscontinuedDate)
+	REFERENCES DM_Time(`Date`)
 )

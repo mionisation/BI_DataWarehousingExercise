@@ -29,6 +29,27 @@ CREATE TABLE DM_FactSales (
 	ShipDate timestamp,
 	IsLateShipment integer,
 
-	CONSTRAINT PK_FactSales PRIMARY KEY (SalesOrderNumber, SalesOrderLineNumber)
+	CONSTRAINT PK_FactSales PRIMARY KEY (SalesOrderNumber, SalesOrderLineNumber),
 
+
+	CONSTRAINT FK_Customer FOREIGN KEY (CustomerID)
+	REFERENCES DM_Customer(CustomerID),
+
+	CONSTRAINT FK_Product FOREIGN KEY (ProductID)
+	REFERENCES DM_Product(ProductID),
+
+	CONSTRAINT FK_ShipToAddress FOREIGN KEY (ShipToAddressID)
+	REFERENCES DM_Location(AddressID),
+
+	CONSTRAINT FK_BillToAddress FOREIGN KEY (BillToAddressID)
+	REFERENCES DM_Location(AddressID),
+
+	CONSTRAINT FK_OrderDate FOREIGN KEY (OrderDate)
+	REFERENCES DM_Time(`Date`),
+
+	CONSTRAINT FK_DueDate FOREIGN KEY (DueDate)
+	REFERENCES DM_Time(`Date`),
+
+	CONSTRAINT FK_ShipDate FOREIGN KEY (ShipDate)
+	REFERENCES DM_Time(`Date`)
 )
