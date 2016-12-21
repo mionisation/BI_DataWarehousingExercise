@@ -1,44 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>OLAP create</name>
+  <name>OLAP load</name>
   <description/>
   <extended_description/>
   <job_version/>
   <job_status>0</job_status>
   <directory>&#x2f;</directory>
   <created_user>-</created_user>
-  <created_date>2016&#x2f;12&#x2f;21 00&#x3a;58&#x3a;40.112</created_date>
+  <created_date>2016&#x2f;12&#x2f;21 11&#x3a;44&#x3a;25.982</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2016&#x2f;12&#x2f;21 12&#x3a;17&#x3a;23.889</modified_date>
+  <modified_date>2016&#x2f;12&#x2f;21 12&#x3a;35&#x3a;28.042</modified_date>
     <parameters>
     </parameters>
-  <connection>
-    <name>BI_OLTP_11</name>
-    <server>localhost</server>
-    <type>MYSQL</type>
-    <access>Native</access>
-    <database>BI_OLTP_11</database>
-    <port>3306</port>
-    <username>root</username>
-    <password>Encrypted 2be98afc86aa7f2d38f4ea164d781acd2</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
-      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
     <slaveservers>
     </slaveservers>
       <job-log-table>
@@ -315,6 +288,42 @@
    <shared_objects_file/>
   <entries>
     <entry>
+      <name>DM_Location_Trans</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>rep_name</specification_method>
+      <trans_object_id/>
+      <filename/>
+      <transname>DM_Location_Trans</transname>
+      <directory>&#x2f;</directory>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>544</xloc>
+      <yloc>32</yloc>
+    </entry>
+    <entry>
       <name>START</name>
       <description/>
       <type>SPECIAL</type>
@@ -331,94 +340,158 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>272</xloc>
+      <xloc>192</xloc>
+      <yloc>32</yloc>
+    </entry>
+    <entry>
+      <name>DM_Time_Trans</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>rep_name</specification_method>
+      <trans_object_id/>
+      <filename/>
+      <transname>DM_Time_Trans</transname>
+      <directory>&#x2f;</directory>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>544</xloc>
+      <yloc>240</yloc>
+    </entry>
+    <entry>
+      <name>DM_Customer_Trans</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>rep_name</specification_method>
+      <trans_object_id/>
+      <filename/>
+      <transname>DM_Customer_Trans</transname>
+      <directory>&#x2f;</directory>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>192</xloc>
+      <yloc>240</yloc>
+    </entry>
+    <entry>
+      <name>DM_Product_Trans</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>rep_name</specification_method>
+      <trans_object_id/>
+      <filename/>
+      <transname>DM_Product_Trans</transname>
+      <directory>&#x2f;</directory>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>192</xloc>
       <yloc>496</yloc>
     </entry>
     <entry>
-      <name>DM_Customer_SQL</name>
+      <name>DM_FactSales_Trans</name>
       <description/>
-      <type>SQL</type>
-      <sql/>
-      <useVariableSubstitution>F</useVariableSubstitution>
-      <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>&#x2f;home&#x2f;mionisation&#x2f;Dropbox&#x2f;UNI WS 2016&#x2f;BI&#x2f;UE&#x2f;ws16_bi_2_datawarehousing&#x2f;task2&#x2f;DM&#x2f;DM_Customer.sql</sqlfilename>
-      <sendOneStatement>F</sendOneStatement>
-      <connection>BI_OLTP_11</connection>
+      <type>TRANS</type>
+      <specification_method>rep_name</specification_method>
+      <trans_object_id/>
+      <filename/>
+      <transname>DM_FactSales_Trans</transname>
+      <directory>&#x2f;</directory>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>528</xloc>
+      <xloc>544</xloc>
       <yloc>496</yloc>
-    </entry>
-    <entry>
-      <name>DM_Location_SQL</name>
-      <description/>
-      <type>SQL</type>
-      <sql/>
-      <useVariableSubstitution>F</useVariableSubstitution>
-      <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>&#x2f;home&#x2f;mionisation&#x2f;Dropbox&#x2f;UNI WS 2016&#x2f;BI&#x2f;UE&#x2f;ws16_bi_2_datawarehousing&#x2f;task2&#x2f;DM&#x2f;DM_Location.sql</sqlfilename>
-      <sendOneStatement>F</sendOneStatement>
-      <connection>BI_OLTP_11</connection>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>832</xloc>
-      <yloc>496</yloc>
-    </entry>
-    <entry>
-      <name>DM_Product_SQL</name>
-      <description/>
-      <type>SQL</type>
-      <sql/>
-      <useVariableSubstitution>F</useVariableSubstitution>
-      <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>&#x2f;home&#x2f;mionisation&#x2f;Dropbox&#x2f;UNI WS 2016&#x2f;BI&#x2f;UE&#x2f;ws16_bi_2_datawarehousing&#x2f;task2&#x2f;DM&#x2f;DM_Product.sql</sqlfilename>
-      <sendOneStatement>F</sendOneStatement>
-      <connection>BI_OLTP_11</connection>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>1136</xloc>
-      <yloc>256</yloc>
-    </entry>
-    <entry>
-      <name>DM_Time_SQL</name>
-      <description/>
-      <type>SQL</type>
-      <sql/>
-      <useVariableSubstitution>F</useVariableSubstitution>
-      <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>&#x2f;home&#x2f;mionisation&#x2f;Dropbox&#x2f;UNI WS 2016&#x2f;BI&#x2f;UE&#x2f;ws16_bi_2_datawarehousing&#x2f;task2&#x2f;DM&#x2f;DM_Time.sql</sqlfilename>
-      <sendOneStatement>F</sendOneStatement>
-      <connection>BI_OLTP_11</connection>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>1120</xloc>
-      <yloc>496</yloc>
-    </entry>
-    <entry>
-      <name>DM_FactSales_SQL</name>
-      <description/>
-      <type>SQL</type>
-      <sql/>
-      <useVariableSubstitution>F</useVariableSubstitution>
-      <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>&#x2f;home&#x2f;mionisation&#x2f;Dropbox&#x2f;UNI WS 2016&#x2f;BI&#x2f;UE&#x2f;ws16_bi_2_datawarehousing&#x2f;task2&#x2f;DM&#x2f;DM_FactSales.sql</sqlfilename>
-      <sendOneStatement>F</sendOneStatement>
-      <connection>BI_OLTP_11</connection>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>848</xloc>
-      <yloc>256</yloc>
     </entry>
   </entries>
   <hops>
     <hop>
       <from>START</from>
-      <to>DM_Customer_SQL</to>
+      <to>DM_Location_Trans</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -426,8 +499,8 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>DM_Customer_SQL</from>
-      <to>DM_Location_SQL</to>
+      <from>DM_Location_Trans</from>
+      <to>DM_Time_Trans</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -435,8 +508,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>DM_Location_SQL</from>
-      <to>DM_Time_SQL</to>
+      <from>DM_Time_Trans</from>
+      <to>DM_Customer_Trans</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -444,8 +517,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>DM_Time_SQL</from>
-      <to>DM_Product_SQL</to>
+      <from>DM_Customer_Trans</from>
+      <to>DM_Product_Trans</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -453,8 +526,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>DM_Product_SQL</from>
-      <to>DM_FactSales_SQL</to>
+      <from>DM_Product_Trans</from>
+      <to>DM_FactSales_Trans</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
