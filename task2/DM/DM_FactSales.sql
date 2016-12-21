@@ -2,12 +2,6 @@ CREATE DATABASE IF NOT EXISTS BI_OLAP_11;
 
 USE BI_OLAP_11;
 
-DROP TABLE IF EXISTS DM_Customer;
-DROP TABLE IF EXISTS DM_Location;
-DROP TABLE IF EXISTS DM_Product;
-DROP TABLE IF EXISTS DM_Time;
-DROP TABLE IF EXISTS DM_FactSales;
-
 CREATE TABLE DM_FactSales (
 	SalesOrderNumber varchar(255) not null,
 	SalesOrderLineNumber varchar(100),
