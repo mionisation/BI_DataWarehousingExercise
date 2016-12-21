@@ -6,7 +6,7 @@
     <database>BI_OLTP_11</database>
     <port>3306</port>
     <username>root</username>
-    <password>Encrypted 2be98afc86aa7f2d38f4ea164d781acd2</password>
+    <password>Encrypted 2be98afc86aa7f2a9b237ab67ee93bcc9</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>

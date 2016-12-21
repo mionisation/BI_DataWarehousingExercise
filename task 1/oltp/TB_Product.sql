@@ -13,8 +13,8 @@ CREATE TABLE TB_Product (
 	ProductCategoryID int not null,
 	ProductModelName varchar(255),
 	SellStartDate timestamp not null,
-	SellEndDate timestamp,
-	DiscontinuedDate timestamp,
+	SellEndDate timestamp default CURRENT_TIMESTAMP(),
+	DiscontinuedDate timestamp default CURRENT_TIMESTAMP(),
 	
 	CONSTRAINT PK_Product PRIMARY KEY (ProductID),
 

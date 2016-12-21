@@ -8,7 +8,7 @@
   <created_user>-</created_user>
   <created_date>2016&#x2f;12&#x2f;18 17&#x3a;58&#x3a;57.838</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2016&#x2f;12&#x2f;19 22&#x3a;36&#x3a;50.437</modified_date>
+  <modified_date>2016&#x2f;12&#x2f;21 14&#x3a;04&#x3a;44.722</modified_date>
     <parameters>
     </parameters>
   <connection>
@@ -320,7 +320,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>&#x2f;home&#x2f;mionisation&#x2f;Dropbox&#x2f;UNI WS 2016&#x2f;BI&#x2f;UE&#x2f;ws16_bi_2_datawarehousing&#x2f;task 1&#x2f;oltp&#x2f;TB_Product.sql</sqlfilename>
+      <sqlfilename>&#x2f;Users&#x2f;daniefuvesi&#x2f;ws16_bi_2_datawarehousing&#x2f;task 1&#x2f;oltp&#x2f;TB_Product.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_OLTP_11</connection>
       <parallel>N</parallel>
@@ -336,7 +336,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>&#x2f;home&#x2f;mionisation&#x2f;Dropbox&#x2f;UNI WS 2016&#x2f;BI&#x2f;UE&#x2f;ws16_bi_2_datawarehousing&#x2f;task 1&#x2f;oltp&#x2f;TB_Customer.sql</sqlfilename>
+      <sqlfilename>&#x2f;Users&#x2f;daniefuvesi&#x2f;ws16_bi_2_datawarehousing&#x2f;task 1&#x2f;oltp&#x2f;TB_Customer.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_OLTP_11</connection>
       <parallel>N</parallel>
@@ -352,7 +352,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>&#x2f;home&#x2f;mionisation&#x2f;Dropbox&#x2f;UNI WS 2016&#x2f;BI&#x2f;UE&#x2f;ws16_bi_2_datawarehousing&#x2f;task 1&#x2f;oltp&#x2f;TB_Address.sql</sqlfilename>
+      <sqlfilename>&#x2f;Users&#x2f;daniefuvesi&#x2f;ws16_bi_2_datawarehousing&#x2f;task 1&#x2f;oltp&#x2f;TB_Address.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_OLTP_11</connection>
       <parallel>N</parallel>
@@ -368,7 +368,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>&#x2f;home&#x2f;mionisation&#x2f;Dropbox&#x2f;UNI WS 2016&#x2f;BI&#x2f;UE&#x2f;ws16_bi_2_datawarehousing&#x2f;task 1&#x2f;oltp&#x2f;TB_SalesOrderDetail.sql</sqlfilename>
+      <sqlfilename>&#x2f;Users&#x2f;daniefuvesi&#x2f;ws16_bi_2_datawarehousing&#x2f;task 1&#x2f;oltp&#x2f;TB_SalesOrderDetail.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_OLTP_11</connection>
       <parallel>N</parallel>
@@ -384,7 +384,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>&#x2f;home&#x2f;mionisation&#x2f;Dropbox&#x2f;UNI WS 2016&#x2f;BI&#x2f;UE&#x2f;ws16_bi_2_datawarehousing&#x2f;task 1&#x2f;oltp&#x2f;TB_SalesOrderHeader.sql</sqlfilename>
+      <sqlfilename>&#x2f;Users&#x2f;daniefuvesi&#x2f;ws16_bi_2_datawarehousing&#x2f;task 1&#x2f;oltp&#x2f;TB_SalesOrderHeader.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_OLTP_11</connection>
       <parallel>N</parallel>
@@ -400,7 +400,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>&#x2f;home&#x2f;mionisation&#x2f;Dropbox&#x2f;UNI WS 2016&#x2f;BI&#x2f;UE&#x2f;ws16_bi_2_datawarehousing&#x2f;task 1&#x2f;oltp&#x2f;TB_ProductCategory.sql</sqlfilename>
+      <sqlfilename>&#x2f;Users&#x2f;daniefuvesi&#x2f;ws16_bi_2_datawarehousing&#x2f;task 1&#x2f;oltp&#x2f;TB_ProductCategory.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_OLTP_11</connection>
       <parallel>N</parallel>
@@ -416,7 +416,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>&#x2f;home&#x2f;mionisation&#x2f;Dropbox&#x2f;UNI WS 2016&#x2f;BI&#x2f;UE&#x2f;ws16_bi_2_datawarehousing&#x2f;task 1&#x2f;oltp&#x2f;TB_ShipMethod.sql</sqlfilename>
+      <sqlfilename>&#x2f;Users&#x2f;daniefuvesi&#x2f;ws16_bi_2_datawarehousing&#x2f;task 1&#x2f;oltp&#x2f;TB_ShipMethod.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_OLTP_11</connection>
       <parallel>N</parallel>
@@ -432,7 +432,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>&#x2f;home&#x2f;mionisation&#x2f;Dropbox&#x2f;UNI WS 2016&#x2f;BI&#x2f;UE&#x2f;ws16_bi_2_datawarehousing&#x2f;task 1&#x2f;oltp&#x2f;TB_CustomerAddress.sql</sqlfilename>
+      <sqlfilename>&#x2f;Users&#x2f;daniefuvesi&#x2f;ws16_bi_2_datawarehousing&#x2f;task 1&#x2f;oltp&#x2f;TB_CustomerAddress.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_OLTP_11</connection>
       <parallel>N</parallel>
@@ -513,7 +513,7 @@
       <to>SQL_CustomerAddress</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
@@ -532,7 +532,7 @@
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
+      <evaluation>N</evaluation>
       <unconditional>N</unconditional>
     </hop>
   </hops>
