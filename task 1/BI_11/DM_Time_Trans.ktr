@@ -429,14 +429,181 @@
     <created_user>-</created_user>
     <created_date>2016&#x2f;12&#x2f;21 12&#x3a;48&#x3a;10.870</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2016&#x2f;12&#x2f;21 12&#x3a;48&#x3a;31.975</modified_date>
-    <key_for_session_key/>
+    <modified_date>2016&#x2f;12&#x2f;22 00&#x3a;46&#x3a;30.280</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
+  <connection>
+    <name>BI_OLAP_11</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>BI_OLAP_11</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2a9b237ab67ee93bcc9</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>BI_OLTP_11</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>BI_OLTP_11</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2a9b237ab67ee93bcc9</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
   <order>
+    <hop>
+      <from>All_Dates_Table input</from>
+      <to>Insert &#x2f; Update</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
+  <step>
+    <name>All_Dates_Table input</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>BI_OLTP_11</connection>
+    <sql>&#x28;SELECT SellStartDate AS &#x60;Date&#x60;, EXTRACT&#x28;DAY FROM SellStartDate&#x29; AS  DayNumberOfMonth , EXTRACT&#x28;MONTH FROM SellStartDate&#x29; AS  MonthNumberOfYear , EXTRACT&#x28;YEAR FROM SellStartDate&#x29; AS  CalendarYear  FROM TB_Product&#x29;&#xa;UNION&#xa;&#x28;SELECT SellEndDate  AS &#x60;Date&#x60;, EXTRACT&#x28;DAY FROM SellEndDate&#x29; AS  DayNumberOfMonth , EXTRACT&#x28;MONTH FROM SellEndDate&#x29; AS  MonthNumberOfYear , EXTRACT&#x28;YEAR FROM SellEndDate&#x29; AS  CalendarYear  FROM TB_Product&#x29;&#xa;UNION&#xa;&#x28;SELECT DiscontinuedDate  AS &#x60;Date&#x60;, EXTRACT&#x28;DAY FROM DiscontinuedDate&#x29; AS  DayNumberOfMonth , EXTRACT&#x28;MONTH FROM DiscontinuedDate&#x29; AS  MonthNumberOfYear , EXTRACT&#x28;YEAR FROM DiscontinuedDate&#x29; AS  CalendarYear  FROM TB_Product&#x29;&#xa;UNION&#xa;&#x28;SELECT OrderDate  AS &#x60;Date&#x60;, EXTRACT&#x28;DAY FROM OrderDate&#x29; AS  DayNumberOfMonth , EXTRACT&#x28;MONTH FROM OrderDate&#x29; AS  MonthNumberOfYear , EXTRACT&#x28;YEAR FROM OrderDate&#x29; AS  CalendarYear  FROM TB_SalesOrderHeader&#x29;&#xa;UNION&#xa;&#x28;SELECT DueDate  AS &#x60;Date&#x60;, EXTRACT&#x28;DAY FROM DueDate&#x29; AS  DayNumberOfMonth , EXTRACT&#x28;MONTH FROM DueDate&#x29; AS  MonthNumberOfYear , EXTRACT&#x28;YEAR FROM DueDate&#x29; AS  CalendarYear  FROM TB_SalesOrderHeader&#x29;&#xa;UNION&#xa;&#x28;SELECT ShipDate  AS &#x60;Date&#x60;, EXTRACT&#x28;DAY FROM ShipDate&#x29; AS  DayNumberOfMonth , EXTRACT&#x28;MONTH FROM ShipDate&#x29; AS  MonthNumberOfYear , EXTRACT&#x28;YEAR FROM ShipDate&#x29; AS  CalendarYear  FROM TB_SalesOrderHeader&#x29;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Insert &#x2f; Update</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>BI_OLAP_11</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>DM_Time</table>
+      <key>
+        <name>Date</name>
+        <field>Date</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>DayNumberOfMonth</name>
+        <field>DayNumberOfMonth</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>MonthNumberOfYear</name>
+        <field>MonthNumberOfYear</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>CalendarYear</name>
+        <field>CalendarYear</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>Date</name>
+        <rename>Date</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>DayNumberOfMonth</name>
+        <rename>DayNumberOfMonth</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>MonthNumberOfYear</name>
+        <rename>MonthNumberOfYear</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>CalendarYear</name>
+        <rename>CalendarYear</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
   <step_error_handling>
   </step_error_handling>
   <slave-step-copy-partition-distribution>
