@@ -17,9 +17,9 @@ CREATE TABLE DM_Product (
 	ProductSubCategory int not null,
 	ProductTopCategory int not null,
 
-	SellStartDate timestamp not null,
-	SellEndDate timestamp,
-	DiscontinuedDate timestamp,
+	SellStartDate timestamp not null default CURRENT_TIMESTAMP(),
+	SellEndDate timestamp default CURRENT_TIMESTAMP(),
+	DiscontinuedDate timestamp default CURRENT_TIMESTAMP(),
 	IsBulkyItem integer,
 
 	CONSTRAINT PK_DM_Product PRIMARY KEY (ProductID),

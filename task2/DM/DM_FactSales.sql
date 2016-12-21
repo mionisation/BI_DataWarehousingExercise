@@ -18,9 +18,9 @@ CREATE TABLE DM_FactSales (
 	TaxAmount numeric(10,4),
 	OrderLineFreightCost numeric(10,4),
 	OrderStatus int,
-	OrderDate timestamp,
-	DueDate timestamp,
-	ShipDate timestamp,
+	OrderDate timestamp default CURRENT_TIMESTAMP(),
+	DueDate timestamp default CURRENT_TIMESTAMP(),
+	ShipDate timestamp default CURRENT_TIMESTAMP(),
 	IsLateShipment integer,
 
 	CONSTRAINT PK_FactSales PRIMARY KEY (SalesOrderNumber, SalesOrderLineNumber),
