@@ -22,3 +22,7 @@ Updating database connection   {0}
 Save repository element : BI_OLTP_11 : Modification by user
 Updating database connection   {0} 
 Save repository element : BI_OLTP_11 : Modification by user
+Creating database: BI_OLAP_11
+Save repository element : BI_OLAP_11 : Creation of initial version
+Updating database connection   {0} 
+Save repository element : BI_OLAP_11 : Modification by user
