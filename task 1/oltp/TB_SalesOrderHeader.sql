@@ -6,9 +6,9 @@ USE BI_OLTP_11;
 CREATE TABLE TB_SalesOrderHeader (
 	SalesOrderID int not null,
 	RevisionNumber int not null,
-	OrderDate timestamp not null,
-	DueDate timestamp not null,
-	ShipDate timestamp,
+	OrderDate timestamp not null default CURRENT_TIMESTAMP(),
+	DueDate timestamp not null default CURRENT_TIMESTAMP(),
+	ShipDate timestamp default CURRENT_TIMESTAMP(),
 	Status int not null,
 	SalesOrderNumber varchar(255) not null,
 	CustomerID int not null,

@@ -8,7 +8,7 @@
   <created_user>-</created_user>
   <created_date>2016&#x2f;12&#x2f;19 00&#x3a;25&#x3a;54.630</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2016&#x2f;12&#x2f;19 22&#x3a;36&#x3a;51.703</modified_date>
+  <modified_date>2016&#x2f;12&#x2f;21 14&#x3a;38&#x3a;06.265</modified_date>
     <parameters>
     </parameters>
   <connection>
@@ -19,7 +19,7 @@
     <database>BI_OLTP_11</database>
     <port>3306</port>
     <username>root</username>
-    <password>Encrypted 2be98afc86aa7f2d38f4ea164d781acd2</password>
+    <password>Encrypted 2be98afc86aa7f2a9b237ab67ee93bcc9</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
