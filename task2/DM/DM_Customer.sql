@@ -13,7 +13,7 @@ CREATE TABLE DM_Customer (
 
 	CustomerID int not null,
 	Name varchar(150),
-	BirthDate timestamp,
+	BirthDate varchar(255),
 	Age integer,
 	Gender varchar(10) 	,
 	Email varchar(255),
