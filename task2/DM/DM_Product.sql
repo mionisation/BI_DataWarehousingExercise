@@ -7,15 +7,15 @@ CREATE TABLE DM_Product (
 	ProductID int not null,
 	ProductNumber varchar(255) not null,
 	Name  varchar(255) not null,
-	ProductModelName varchar(255),
+	ModelName varchar(255),
 	StandardCost numeric not null,
 	ListPrice numeric not null,
 
 	`Size` varchar(255),
 	Weight numeric,
 
-	ProductSubCategory int not null,
-	ProductTopCategory int not null,
+	ProductSubCategory varchar(255) not null,
+	ProductTopCategory varchar(255) not null,
 
 	SellStartDate timestamp not null default CURRENT_TIMESTAMP(),
 	SellEndDate timestamp default CURRENT_TIMESTAMP(),
