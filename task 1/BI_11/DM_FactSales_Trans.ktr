@@ -429,14 +429,73 @@
     <created_user>-</created_user>
     <created_date>2016&#x2f;12&#x2f;21 12&#x3a;50&#x3a;52.245</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2016&#x2f;12&#x2f;21 12&#x3a;50&#x3a;54.033</modified_date>
-    <key_for_session_key/>
+    <modified_date>2016&#x2f;12&#x2f;23 00&#x3a;47&#x3a;27.786</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
+  <connection>
+    <name>BI_OLTP_11</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>BI_OLTP_11</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2a9b237ab67ee93bcc9</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
   <order>
   </order>
+  <step>
+    <name>Table input</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>BI_OLTP_11</connection>
+    <sql>SELECT soh.SalesOrderNumber,&#xa;concat&#x28;soh.SalesOrderID, &#x27;-&#x27;, sod.SalesOrderDetailID&#x29; as SalesOrderLineNumber,&#xa;soh.CustomerID,	sod.ProductID, soh.ShipToAddressID, soh.BillToAddressID,&#xa;sm.Name as ShipmentMethod,&#xa;sod.UnitPrice,&#xa;sod.OrderQty &#x2a; sod.UnitPrice &#x2a; IF&#x28;PCtop.Name &#x3d; &#x27;Bikes&#x27;, 0, IF&#x28;PCtop.Name &#x3d; &#x27;Components&#x27;,0,IF&#x28;PCtop.Name &#x3d; &#x27;Clothing&#x27;,IF&#x28;sod.OrderQty &#x3e;&#x3d; 10, 0.1,IF&#x28;sod.OrderQty &#x3e;&#x3d; 5, 0.05, 0&#x29;&#x29;,IF&#x28;PCtop.Name &#x3d; &#x27;Accessories&#x27;,IF&#x28;sod.OrderQty &#x3e;&#x3d; 10, 0.11,IF&#x28;sod.OrderQty &#x3e;&#x3d; 5, 0.04, 0&#x29;&#x29;,0&#x29;&#x29;&#x29;&#x29; as Discount,&#xa;sod.OrderQty as OrderQuantity,&#xa;&#x28;&#x28;sod.OrderQty &#x2a; sod.UnitPrice&#x29; - Discount&#x29; as OrderLineTotal,	&#xa;&#x28;OrderLineTotal - &#x28;sod.OrderQty &#x2a; P.StandardCost&#x29;&#x29; as OrderLineProfit,&#xa;&#x28;IF&#x28;Addr.CountryRegion &#x3d; &#x27;Australia&#x27;, 0.1, IF&#x28;Addr.CountryRegion &#x3d; &#x27;United Kingdom&#x27;, 0.175, IF&#x28;Addr.CountryRegion &#x3d; &#x27;Canada&#x27;, 0.13, IF&#x28;Addr.CountryRegion &#x3d; &#x27;United States&#x27;, 0.08, 0&#x29;&#x29;&#x29; &#x29; &#x2a; OrderLineTotal &#x29; as TaxAmount,&#xa;OrderQuantity &#x2a; PerItemCost	&#x2b; BulkyItemSurcharge as OrderLineFreightCost,&#xa;soh.Status as OrderStatus, soh.OrderDate, soh.DueDate, soh.ShipDate,&#xa;IF&#x28;soh.ShipDate &#x3e; soh.DueDate, true, false&#x29; as IsLateShipment&#xa;FROM&#xa;TB_SalesOrderDetail as sod&#xa;LEFT JOIN&#xa;TB_SalesOrderHeader as soh&#xa;on sod.SalesOrderID &#x3d; soh.SalesOrderID&#xa;LEFT JOIN&#xa;TB_ShipMethod as sm&#xa;on sm.ShipMethodID &#x3d; soh.ShipMethodID&#xa;LEFT JOIN TB_Product as P&#xa;ON P.ProductID &#x3d; sod.ProductID&#xa;LEFT JOIN TB_ProductCategory as PCsub&#xa;ON p.ProductCategoryID &#x3d; PCsub.ProductCategoryID&#xa;LEFT JOIN TB_ProductCategory as PCtop&#xa;ON PCsub.ParentProductCategoryID &#x3d; PCtop.ProductCategoryID&#xa;LEFT JOIN TB_Address as Addr&#xa;ON Addr.AddressID &#x3d; soh.ShipToAddressID&#xa;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>560</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
   <step_error_handling>
   </step_error_handling>
   <slave-step-copy-partition-distribution>
