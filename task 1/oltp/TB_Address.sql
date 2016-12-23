@@ -8,7 +8,7 @@ CREATE TABLE TB_Address (
 	AddressLine varchar(255) not null,
 	City varchar(255) not null,
 	StateProvince varchar(255),
+	CountryRegion varchar(255) not null,	
 	PostalCode varchar(255) not null,
-	CountryRegion varchar(255) not null,
 	CONSTRAINT PK_Address PRIMARY KEY (AddressID)
 )
