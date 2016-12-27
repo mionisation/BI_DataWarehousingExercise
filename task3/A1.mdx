@@ -1,0 +1,7 @@
+SELECT {[Measures].Profit} ON COLUMNS,
+	ORDER(
+	{[BilledTo].[CountryRegion].MEMBERS},
+	 [Measures].Profit, DESC
+	) ON ROWS
+FROM [bike_sales]
+WHERE [OrderDate].[Year].[2013]
