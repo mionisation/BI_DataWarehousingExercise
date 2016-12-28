@@ -1,0 +1,7 @@
+SELECT {[Measures].Revenue} ON COLUMNS,
+	ORDER(
+	{[Product].[TopCategory].MEMBERS},
+	 [Measures].Revenue, DESC
+	) ON ROWS
+FROM [bike_sales]
+WHERE [OrderDate].[Year].[2014]
