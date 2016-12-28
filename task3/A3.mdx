@@ -1,0 +1,6 @@
+SELECT TAIL( [OrderDate].[Month].MEMBERS, 24) ON COLUMNS,
+
+	[Product].[TopCategory].MEMBERS ON ROWS,
+
+	NON EMPTY([Measures].Profit ) ON AXIS(2)
+FROM [bike_sales] 
