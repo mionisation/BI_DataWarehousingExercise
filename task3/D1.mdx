@@ -1,4 +1,2 @@
-SELECT [OrderDate].[2014].[1]:[OrderDate].[2014].[7] ON COLUMNS,
-
-	Measures.[TaxAmount] ON ROWS
+SELECT {[OrderDate].[2014].[1]:[OrderDate].[2014].[7]} *  Measures.[TaxAmount]  ON COLUMNS
 FROM [bike_sales] 
