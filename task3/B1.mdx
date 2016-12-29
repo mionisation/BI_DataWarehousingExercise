@@ -1,0 +1,3 @@
+SELECT ORDER([Product.Name].MEMBERS, Measures.[Profit], DESC) ON COLUMNS,
+[Product].[TopCategory].MEMBERS ON ROWS
+FROM [bike_sales]	
