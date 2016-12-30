@@ -1,0 +1,2 @@
+Unfortunately the columns CountryRegion and PostalCode were swapped. Therefore in query A1 the postal codes are returned from the cube instead of the regions.
+In query C1 though we could use the column PostalCode as if it were the CountryRegion one so that the query returns the expected results.
