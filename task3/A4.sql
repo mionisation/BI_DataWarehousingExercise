@@ -17,14 +17,14 @@ from
 			order by sum(s.OrderLineProfit) desc
 			limit 5) as cus
 	) as x,
-(
-select p.Name, s.CustomerID, s.ProductID, sum(s.OrderQuantity)
-from DM_FactSales s, DM_Product p
-where p.ProductID = s.ProductID
-group by s.ProductID, s.CustomerID
-order by sum(s.OrderQuantity) desc
-) as y
-where x.CustomerID = y.CustomerID
+	(
+		select p.Name, s.CustomerID, s.ProductID, sum(s.OrderQuantity)
+		from DM_FactSales s, DM_Product p
+		where p.ProductID = s.ProductID
+		group by s.ProductID, s.CustomerID
+		order by sum(s.OrderQuantity) desc
+	) as y
+	where x.CustomerID = y.CustomerID
 ) as tab
 where rank <= 4;
 
